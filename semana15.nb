@@ -1,0 +1,207 @@
+Notebook[{Cell[
+BoxData[""],"Input",CellID->11],Cell[
+CellGroupData[{Cell[
+TextData[
+{"Semana"," ","15"}],"Title",CellID->3],Cell[
+CellGroupData[{Cell[
+TextData[{StyleBox[
+"Elabora",FontSize->24],StyleBox[" ",FontSize->24],StyleBox["un",FontSize->24],StyleBox[
+" ",FontSize->24],StyleBox["programa",FontSize->24],StyleBox[RowBox[{StyleBox[",",
+FontSize->24],StyleBox[" ",FontSize->24]}]],StyleBox["en",FontSize->24],StyleBox[
+" ",FontSize->24],StyleBox["el",FontSize->24],StyleBox[" ",FontSize->24],StyleBox[
+"lenguaje",FontSize->24],StyleBox[" ",FontSize->24],StyleBox["de",FontSize->24],StyleBox[
+" ",FontSize->24],StyleBox["programaci\[OAcute]n",FontSize->24],StyleBox[" ",FontSize->24],StyleBox[
+"que",FontSize->24],StyleBox[" ",FontSize->24],StyleBox["desees",FontSize->24],StyleBox[
+RowBox[{StyleBox[",",FontSize->24],StyleBox[" ",FontSize->24]}]],StyleBox["que",FontSize->24],StyleBox[
+" ",FontSize->24],StyleBox["calcule",FontSize->24],StyleBox[" ",FontSize->24],StyleBox[
+"el",FontSize->24],StyleBox[" ",FontSize->24],StyleBox["grupo",FontSize->24],StyleBox[
+" ",FontSize->24],StyleBox["de",FontSize->24],StyleBox[" ",FontSize->24],StyleBox[
+"Galois",FontSize->24],StyleBox[" ",FontSize->24],StyleBox["de",FontSize->24],StyleBox[
+" ",FontSize->24],StyleBox["un",FontSize->24],StyleBox[" ",FontSize->24],StyleBox[
+"polinomio",FontSize->24],StyleBox[" ",FontSize->24],StyleBox["de",FontSize->24],StyleBox[
+" ",FontSize->24],StyleBox["grado",FontSize->24],StyleBox[" ",FontSize->24],StyleBox[
+"5",FontSize->24],StyleBox[" ",FontSize->24],StyleBox["sobre",FontSize->24],StyleBox[
+" ",FontSize->24],StyleBox["el",FontSize->24],StyleBox[" ",FontSize->24],StyleBox[
+"cuerpo",FontSize->24],StyleBox[" ",FontSize->24],StyleBox["de",FontSize->24],StyleBox[
+" ",FontSize->24],StyleBox["los",FontSize->24],StyleBox[" ",FontSize->24],StyleBox[
+"n\[UAcute]mero",FontSize->24],StyleBox[" ",FontSize->24],StyleBox["racionales",FontSize->24],StyleBox[
+".",FontSize->24],"\n","\n",StyleBox["El",FontSize->24],StyleBox[" ",FontSize->24],StyleBox[
+"polinomio",FontSize->24],StyleBox[" ",FontSize->24],StyleBox["dado",FontSize->24],StyleBox[
+" ",FontSize->24],StyleBox["no",FontSize->24],StyleBox[" ",FontSize->24],StyleBox[
+"tiene",FontSize->24],StyleBox[" ",FontSize->24],StyleBox["por",FontSize->24],StyleBox[
+" ",FontSize->24],StyleBox["qu\[EAcute]",FontSize->24],StyleBox[" ",FontSize->24],StyleBox[
+"ser",FontSize->24],StyleBox[" ",FontSize->24],StyleBox["irreducible",FontSize->24],StyleBox[
+".",FontSize->24]}],"Section",CellID->5],Cell[
+BoxData[{RowBox[{"Clear","[","\[Alpha]","]",";"}],"\n",RowBox[
+{"Clear","[","\[Beta]","]",";"}],"\n",RowBox[{"Clear","[","\[Gamma]","]",";"}],"\n",RowBox[
+{"Clear","[","\[Epsilon]","]",";"}],"\n",RowBox[{"Clear","[","\[Delta]","]",";"}],"\n",RowBox[
+{"Clear","[","\[Zeta]","]",";"}],"\n",RowBox[{"Clear","[","x",",","f","]",";"}],"\n",RowBox[
+{"\[Alpha]","=","0",";"}],"\n",RowBox[{"\[Beta]","=","1",";"}],"\n",RowBox[{"\[Gamma]","=","0",";"}],"\n",RowBox[
+{"\[Delta]","=","0",";"}],"\n",RowBox[{"\[Epsilon]","=","0",";"}],"\n",RowBox[{"\[Zeta]","=","-","2",";"}],"\n",RowBox[
+{"f","[","x_","]"," ",":="," ","\[Alpha]","*","x","^","5"," ","+"," ","\[Beta]","*","x","^","4"," ","+"," ","\[Gamma]","*","x","^","3"," ","+"," ","\[Delta]","*","x","^","2"," ","+"," ","\[Epsilon]","*","x"," ","+","\[Zeta]"}]}],
+"Code",CellID->18,CellLabel->"In[1979]:= "],Cell[
+BoxData[{RowBox[{"gr","=","Exponent","[","f","[","x","]",",","x","]",";"}],"\n",RowBox[
+{"Clear","[","raiz1","]",";"}],"\n",RowBox[{"raiz1","=","Root","[","f","[","x","]",",","1","]",";"}],"\n",RowBox[
+{"Clear","[","raiz2","]",";"}],"\n",RowBox[{"raiz2","=","Root","[","f","[","x","]",",","2","]",";"}],"\n",RowBox[
+{"Clear","[","raiz3","]",";"}],"\n",RowBox[{"If","[","gr","\[GreaterEqual]","3",",","raiz3","=","Root","[","f","[","x","]",",","3","]","]",";"}],"\n",RowBox[
+{"Clear","[","raiz4","]",";"}],"\n",RowBox[{"If","[","gr","\[GreaterEqual]","4",",","raiz4","=","Root","[","f","[","x","]",",","4","]","]",";"}],"\n",RowBox[
+{"Clear","[","raiz5","]",";"}],"\n",RowBox[{"If","[","gr","==","5",",","raiz5","=","Root","[","f","[","x","]",",","5","]","]",";"}],"\n","\n",RowBox[
+{"r3","=","False",";"}],"\n",RowBox[{"r4","=","False",";"}],"\n",RowBox[{"r5","=","False",";"}],"\n",RowBox[
+{"r1","==","NumberQ","[","raiz1","]",";"}],"\n",RowBox[{"r2","==","NumberQ","[","raiz2","]",";"}],"\n",RowBox[
+{"If","[","gr","\[GreaterEqual]","3",",","r3","==","Element","[","raiz3",",","Rationals","]","]",";"}],"\n",RowBox[
+{"If","[","gr","\[GreaterEqual]","4",",","r4","==","Element","[","raiz4",",","Rationals","]","]",";"}],"\n",RowBox[
+{"If","[","gr","==","5",",","r5","==","Element","[","raiz5",",","Rationals","]","]",";"}],"\n","\n",RowBox[
+{"contador","=","0",";"}],"\n",RowBox[{"If","[","Element","[","raiz1",",","Rationals","]","==","True",",","contador","=","contador","+","1","]",";"}],"\n",RowBox[
+{"If","[","Element","[","raiz2",",","Rationals","]","==","True",",","contador","=","contador","+","1","]",";"}],"\n",RowBox[
+{"If","[","r3","==","True",",","contador","=","contador","+","1","]",";"}],"\n",RowBox[
+{"If","[","r4","==","True",",","contador","=","contador","+","1","]",";"}],"\n",RowBox[
+{"If","[","r5","==","True",",","contador","=","contador","+","1","]",";"}],"\n",RowBox[
+{"contador",";"}],"\n","\n","\n",RowBox[{"If","[","gr","==","5",","," ","If","[","contador","\[GreaterEqual]","1",","," ","If","[","r1","==","True",","," ","rs","=","raiz1","]","]","]",";"}],"\n",RowBox[
+{"If","[","gr","==","5",","," ","If","[","contador","\[GreaterEqual]","1",","," ","If","[","r2","==","True",","," ","rs","=","raiz2","]","]","]",";"}],"\n",RowBox[
+{"If","[","gr","==","5",","," ","If","[","contador","\[GreaterEqual]","1",","," ","If","[","r3","==","True",","," ","rs","=","raiz3","]","]","]",";"}],"\n",RowBox[
+{"If","[","gr","==","5",","," ","If","[","contador","\[GreaterEqual]","1",","," ","If","[","r4","==","True",","," ","rs","=","raiz4","]","]","]",";"}],"\n",RowBox[
+{"If","[","gr","==","5",","," ","If","[","contador","\[GreaterEqual]","1",","," ","If","[","r5","==","True",","," ","rs","=","raiz5","]","]","]",";"}],"\n","\n",RowBox[
+{"If","[","gr","==","5",",","\n",StyleBox[RowBox[{" "," "}]],"If","[","contador","\[GreaterEqual]","1",",","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"," "," "}]],"q","[","x","]","=","PolynomialQuotient","[","f","[","x","]",",","x","+","(","-","1",")","*","rs",",","x","]",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"f","[","x","]","=","q","[","x","]",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"gr","=","4","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]"," "}]],"]","\n","]",";"}],"\n","\n",RowBox[{"If","[","gr","==","5",",","\n",StyleBox[
+RowBox[{" "," "}]],"If","[","IrreduciblePolynomialQ","[","f","[","x_","]","]","==","False",",","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"," "," "," "}]],"If","[","contador","==","0",",","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]"," "," "}]],"If","[","Element","[","Sqrt","[","Discriminant","[","Factor","[","f","[","x","]","]","[","[","1","]","]",",","x","]","*","Discriminant","[","Factor","[","f","[","x","]","]","[","[","2","]","]",",","x","]","]",",","Rationals","]","==","True",",","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]"," "," "}]],"Print","[","\"El grupo de Galois es S3\"","]",",","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"If","[","Exponent","[","Factor","[","f","[","x","]","]","[","[","1","]","]",",","x","]","==","3",",","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]"," "," "}]],"If","[","Element","[","Sqrt","[","Discriminant","[","Factor","[","f","[","x","]","]","[","[","1","]","]",",","x","]","]",",","Rationals","]",",","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]"," "," "," "," "}]],"Print","[","\"El grupo de Galois es A3xS2\"","]",",","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"Print","[","\"El grupo de Galois es S3xS2\"","]","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"]",",","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"If","[","Element","[","Sqrt","[","Discriminant","[","Factor","[","f","[","x","]","]","[","[","2","]","]",",","x","]","]",",","Rationals","]",",","\n",StyleBox[
+RowBox[{" "," "," "," "," "," "," "," "," "," "," "," "," "," "," "}]],"Print","[","\"El grupo de Galois es A3xS2\"","]",",","\n",StyleBox[
+RowBox[{" "," "," "," "," "," "," "," "," "," "," "," "," "," "," "}]],"Print","[","\"El grupo de Galois es S3xS2\"","]","\n",StyleBox[
+RowBox[{" "," "," "," "," "," "," "," "," "," "," "}]],"]","\n",StyleBox[RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"]","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"]","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"]","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"]","\n","]",";"}],"\n","\n",RowBox[
+{"If","[","gr","==","5",",","\n",StyleBox[RowBox[{" "," "}]],"If","[","IrreduciblePolynomialQ","[","f","[","x","]","]","==","True",",","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"," "," "}]],"Switch","[","Length","[","Factor","[","f","[","x","]",",","Extension","\[Rule]","raiz1","]","]",",","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]"," "," "}]],"5",","," ","Print","[","\"El grupo de Galois es C5\"","]",",","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"4",","," ","Print","[","\"El grupo de Galois es D5\"","]",",","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"3",","," ","Print","[","\"El grupo de Galois es D5\"","]",",","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"2",","," ","If","[","Element","[","Sqrt","[","Discriminant","[","f","[","x","]",",","x","]","]",",","Rationals","]","==","True",",","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]"," "," "," "}]],"Print","[","\"El grupo de Galois es A5\"","]",",","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"If","[","IrreduciblePolynomialQ","[","x","^","2","-","Discriminant","[","f","[","x","]",",","x","]",",","Extension","\[Rule]","{","raiz1",",","raiz2","}","]","==","True",",","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]"," "," "}]],"Print","[","\"El grupo de Galois es S5\"","]",",","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"Print","[","\"El grupo de Galois es F20\"","]","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"]","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"]","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"]","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"]","\n","\n","]",";"}],"\n","\n",RowBox[
+{"Clear","[","raiz1","]",";"}],"\n",RowBox[{"raiz1","=","Root","[","f","[","x","]",",","1","]",";"}],"\n",RowBox[
+{"Clear","[","raiz2","]",";"}],"\n",RowBox[{"raiz2","=","Root","[","f","[","x","]",",","2","]",";"}],"\n",RowBox[
+{"Clear","[","raiz3","]",";"}],"\n",RowBox[{"If","[","gr","\[GreaterEqual]","3",",","raiz3","=","Root","[","f","[","x","]",",","3","]","]",";"}],"\n",RowBox[
+{"Clear","[","raiz4","]",";"}],"\n",RowBox[{"If","[","gr","\[GreaterEqual]","4",",","raiz4","=","Root","[","f","[","x","]",",","4","]","]",";"}],"\n",RowBox[
+{"Clear","[","raiz5","]",";"}],"\n",RowBox[{"If","[","gr","==","5",",","raiz5","=","Root","[","f","[","x","]",",","5","]","]",";"}],"\n","\n",RowBox[
+{"r3","=","False",";"}],"\n",RowBox[{"r4","=","False",";"}],"\n",RowBox[{"r5","=","False",";"}],"\n",RowBox[
+{"r1","==","Element","[","raiz1",",","Rationals","]",";"}],"\n",RowBox[{"r2","==","Element","[","raiz2",",","Rationals","]",";"}],"\n",RowBox[
+{"If","[","gr","\[GreaterEqual]","3",",","r3","==","Element","[","raiz3",",","Rationals","]","]",";"}],"\n",RowBox[
+{"If","[","gr","\[GreaterEqual]","4",",","r4","==","Element","[","raiz4",",","Rationals","]","]",";"}],"\n",RowBox[
+{"If","[","gr","==","5",",","r5","==","Element","[","raiz5",",","Rationals","]","]",";"}],"\n","\n",RowBox[
+{"contador","=","0",";"}],"\n",RowBox[{"If","[","Element","[","raiz1",",","Rationals","]","==","True",",","contador","=","contador","+","1","]",";"}],"\n",RowBox[
+{"If","[","Element","[","raiz2",",","Rationals","]","==","True",",","contador","=","contador","+","1","]",";"}],"\n",RowBox[
+{"If","[","r3","==","True",",","contador","=","contador","+","1","]",";"}],"\n",RowBox[
+{"If","[","r4","==","True",",","contador","=","contador","+","1","]",";"}],"\n",RowBox[
+{"If","[","r5","==","True",",","contador","=","contador","+","1","]",";"}],"\n",RowBox[
+{"contador",";"}],"\n","\n",RowBox[{"If","[","gr","==","4",","," ","\n",StyleBox[
+RowBox[{" "," "," "}]],"If","[","contador","==","4",",","\n",StyleBox[RowBox[{" "," "," "," "," "}]],"Print","[","\"El grupo de Galois es el trivial\"","]","\n",StyleBox[
+RowBox[{" "," "," "}]],"]","\n","]",";"}],"\n","\n",RowBox[{"If","[","gr","==","4",","," ","\n",StyleBox[
+RowBox[{" "," "," "}]],"If","[","contador","==","2",","," ","\n",StyleBox[RowBox[
+{" "," "," "," "," "," "}]],"Print","[","\"El grupo de Galois es el C2\"","]","\n",StyleBox[
+RowBox[{" "," "," "," "}]],"]","\n","]",";"}],"\n","\n",RowBox[{"If","[","gr","==","4",","," ","If","[","contador","==","1",",","\n",StyleBox[
+RowBox[{" "," "," "}]],"If","[","r1","==","True",","," ","rs","=","raiz1","]",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"If","[","r2","==","True",","," ","rs","=","raiz2","]",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"If","[","r3","==","True",","," ","rs","=","raiz3","]",";","\n",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\[NonBreakingSpace]","\[NonBreakingSpace]"}]],"If","[","r4","==","True",","," ","rs","=","raiz4","]",";","\n",StyleBox[
+RowBox[{" "," "," "," "," "," "," "}]],"h","[","x","]","=","PolynomialQuotient","[","f","[","x","]",",","x","+","(","-","1",")","*","(","rs",")",",","x","]",";","\n",StyleBox[
+RowBox[{" "," "," "," "," "," "," "}]],"rh1","=","Root","[","h","[","x","]",",","1","]",";","\n",StyleBox[
+RowBox[{" "," "," "," "," "," "," "}]],"rh2","=","Root","[","h","[","x","]",",","2","]",";","\n",StyleBox[
+RowBox[{" "," "," "," "," "," "," "}]],"rh3","=","Root","[","h","[","x","]",",","3","]",";","\n",StyleBox[
+RowBox[{" "," "," "," "," "," "," "}]],"coefh2","=","(","-","1",")","*","(","(","rh1",")","+","(","rh2",")","+","(","rh3",")",")",";","\n",StyleBox[
+RowBox[{" "," "," "," "," "," "," "}]],"coefh1","=","(","rh1",")","*","(","rh2",")","+","(","rh1",")","*","(","rh3",")","+","(","rh2",")","*","(","rh3",")",";","\n",StyleBox[
+RowBox[{" "," "," "," "," "," "," "}]],"coefh0","=","(","-","1",")","*","(","rh1",")","*","(","rh2",")","*","(","rh3",")",";","\n",StyleBox[
+RowBox[{" "," "," "," "," "," "," "}]],"Switch","[","Element","[","Sqrt","[","-","4","*","(","coefh0",")","*","(","coefh2",")","^","3"," ","+",StyleBox[
+RowBox[{" "," "," "," "," "," "," "," "," "," "," "," "," "," "}]],"(","coefh1",")","^","2","*","(","coefh2",")","^","2"," ","+"," ","18","*","(","coefh0",")","*","(","coefh1",")","*",StyleBox[
+RowBox[{" "," "," "," "," "," "," "," "," "," "," "," "," "," "}]],"(","coefh2",")"," ","-"," ","4","*","(","coefh1",")","^","3"," ","-","27","*","coefh2","^","2","]",",","Rationals","]",",","\n",StyleBox[
+RowBox[{" "," "," "," "," "," "," "," "}]],"True",",","\n",StyleBox[RowBox[{" "," "," "," "," "," "," "," "}]],"Print","[","\"El grupo de Galois es A3\"","]"," ",",","\n",StyleBox[
+RowBox[{" "," "," "," "," "," "," "," "}]],"False",","," ","\n",StyleBox[RowBox[{" "," "," "," "," "," "," "," "}]],"Print","[","\"El grupo de Galios es S3\"","]"," ","\n",StyleBox[
+RowBox[{" "," "," "," "," "," "," "," "}]],"]","\n",StyleBox[RowBox[{" "," "," "," "," "}]],"]","\n"," ","]",";"}],"\n",RowBox[
+{"\[NonBreakingSpace]"}],"\n",RowBox[{"\[NonBreakingSpace]","If","[","gr","==","4",",","\n",StyleBox[
+RowBox[{" "," "}]],"If","[","IrreduciblePolynomialQ","[","f","[","x_","]","]","==","False",",","\n",StyleBox[
+RowBox[{" "," "," "," "," "}]],"If","[","contador","==","0",",","\n",StyleBox[RowBox[
+{" "," "," "," "," "," "}]],"If","[","Element","[","Sqrt","[","Discriminant","[","f","[","x_","]",",","x_","]","]",",","Rationals","]","==","True",",","\n",StyleBox[
+RowBox[{" "," "," "," "," "," "," "," "}]],"Print","[","\"El grupo de Galois es C2\"","]",",","\n",StyleBox[
+RowBox[{" "," "," "," "," "," "," "," "}]],"Print","[","\"El grupo de Galois es C2xC2\"","]","\n",StyleBox[
+RowBox[{" "," "," "," "," "," "," "}]],"]","\n",StyleBox[RowBox[{" "," "," "," "," "}]],"]","\n",StyleBox[
+RowBox[{" "," "," "}]],"]","\n","]",";"}],"\n","\n",RowBox[{"If","[","gr","==","4",",","\n",StyleBox[
+RowBox[{" "," "}]],"If","[","IrreduciblePolynomialQ","[","f","[","x_","]","]","==","True",",","\n",StyleBox[
+RowBox[{" "," "," "," "}]],"Switch","[","Length","[","Factor","[","f","[","x","]",",","Extension","\[Rule]","raiz1","]","]",",","\n",StyleBox[
+RowBox[{" "," "," "," "," "," "}]],"4",","," ","If","[","NumberQ","[","Sqrt","[","Discriminant","[","f","[","x","]",",","x","]","]","]","==","True",",","\n",StyleBox[
+RowBox[{" "," "," "," "," "," "," "," "," "," "," "}]],"Print","[","\"El grupo de Galois es V\"","]",",","\n",StyleBox[
+RowBox[{" "," "," "," "," "," "," "," "," "," "," "}]],"Print","[","\"El grupo de Galois es C4\"","]","\n",StyleBox[
+RowBox[{" "," "," "," "," "," "," "," "," "}]],"]",",","\n",StyleBox[RowBox[{" "," "," "," "," "," "}]],"3",","," ","Print","[","\"El grupo de Galois es D4\"","]",",","\n",StyleBox[
+RowBox[{" "," "," "," "," "," "}]],"2",","," ","If","[","Element","[","Sqrt","[","Discriminant","[","f","[","x","]",",","x","]","]",",","Rationals","]","==","True",",","\n",StyleBox[
+RowBox[{" "," "," "," "," "," "," "," "," "}]],"Print","[","\"El grupo de Galois es A4\"","]",",","\n",StyleBox[
+RowBox[{" "," "," "," "," "," "," "," "," "}]],"Print","[","\"El grupo de Galois es S4\"","]","\n",StyleBox[
+RowBox[{" "," "," "," "," "," "," "," "," "}]],"]","\n",StyleBox[RowBox[{" "," "," "," "," "," "," "}]],"]","\n",StyleBox[
+RowBox[{" "," "," "," "}]],"\n",StyleBox[RowBox[{" "," "}]],"]","\n","]",";"}],"\n","\n",RowBox[
+{"If","[","r1","==","True",","," ","rs","=","raiz1","]",";"}],"\n",RowBox[{"If","[","r2","==","True",","," ","rs","=","raiz2","]",";"}],"\n",RowBox[
+{"If","[","r3","==","True",","," ","rs","=","raiz3","]",";"}],"\n",RowBox[{"g","[","x","]","=","PolynomialQuotient","[","f","[","x","]",",","x","+","(","-","1",")","*","(","rs",")",",","x","]",";"}],"\n","\n",RowBox[
+{"If","[","gr","==","3",",","\n",StyleBox[RowBox[{" "," "}]],"If","[","contador","==","1",",","\n",StyleBox[
+RowBox[{" "," "," "," "}]],"If","[","IrreduciblePolynomialQ","[","g","[","x","]","]","==","True",",","\n",StyleBox[
+RowBox[{" "," "," "," "," "," "}]],"Print","[","\"El grupo de Galois es S2\"","]",",","\n",StyleBox[
+RowBox[{" "," "," "," "," "," "}]],"Print","[","\"El grupo de Galois es A2\"","]","\n",StyleBox[
+RowBox[{" "," "," "," "}]],"]","\n",StyleBox[RowBox[{" "," "}]],"]","\n","]",";"}],"\n","\n",RowBox[
+{"If","[","gr","==","3",",","\n",StyleBox[RowBox[{" "," "," "}]],"If","[","IrreduciblePolynomialQ","[","f","[","x_","]","]","==","True",",","\n",StyleBox[
+RowBox[{" "," "," "," "," "}]],"Switch","[","Element","[","Sqrt","[","-","4","*","\[Zeta]","*","\[Delta]","^","3"," ","+"," ","\[Epsilon]","^","2","*","\[Delta]","^","2"," ","+"," ","18","*","\[Zeta]","*","\[Delta]","*","\[Epsilon]"," ","-"," ","4","*","\[Epsilon]","^","3"," ","-","27","*","\[Zeta]","^","2","]",",","Rationals","]",",","\n",StyleBox[
+RowBox[{" "," "," "," "," "," "," "," "}]],"True",",","Print","[","\"El grupo de Galois es A3\"","]"," ",",","\n",StyleBox[
+RowBox[{" "," "," "," "," "," "," "," "}]],"False",","," ","Print","[","\"El grupo de Galios es S3\"","]"," ","]",",","\n",StyleBox[
+RowBox[{" "," "," "," "," "}]],"If","[","contador","==","3",",","Print","[","\"El grupo de Galios es el trivial\"","]","]","\n",StyleBox[
+RowBox[{" "," "," "," "}]],"]","\n","]",";"}],"\n","\n",RowBox[{"If","[","gr","==","2",","," ","\n",StyleBox[
+RowBox[{" "," "," "}]],"If","[","Element","[","Sqrt","[","\[Epsilon]","^","2","+","4","*","\[Zeta]","]",",","Rationals","]","==","True",",","\n",StyleBox[
+RowBox[{" "," "," "," "}]],"Print","[","\"El grupo de Galois es A2\"","]",",","\n",StyleBox[
+RowBox[{" "," "," "," "}]],"Print","[","\"El grupo de Galios es S2\"","]","\n",StyleBox[
+RowBox[{" "," "," "}]],"]","\n","]",";"}],"\n","\n",RowBox[{"If","[","gr","==","1",",","\n",StyleBox[
+RowBox[{" "," "}]],"Print","[","\"El grupo de Galois es el trivial\"","]","\n","]",";"}]}],
+"Code",CellID->90,CellLabel->"In[1993]:= "],Cell[
+BoxData["\"El grupo de Galois es D4\"",
+StandardForm],"Print",CellID->6],Cell[
+BoxData["\"El grupo de Galois es F20\"",StandardForm],
+"Print",CellID->4],Cell[
+BoxData["\"El grupo de Galois es C2xC2\""],"Print",CellID->30],Cell[
+BoxData[
+TemplateBox[{"Root","nup","\"\:f7c1\:f7c9\:f7c8RowBox[{\"\:f3b5\:f3b5\:f3b5\", StyleBox[TagBox[RowBox[{RowBox[{\"-\", \"rs\"}], \"-\", RowBox[{\"2\", \" \", SuperscriptBox[\"rs\", \"2\"]}], \"+\", SuperscriptBox[\"rs\", \"4\"], \"+\", RowBox[{RowBox[{\"(\", RowBox[{RowBox[{\"-\", \"1\"}], \"-\", RowBox[{\"2\", \" \", \"rs\"}], \"+\", SuperscriptBox[\"rs\", \"3\"]}], \")\"}], \" \", \"x\"}], \"+\", RowBox[{RowBox[{\"(\", RowBox[{RowBox[{\"-\", \"2\"}], \"+\", SuperscriptBox[\"rs\", \"2\"]}], \")\"}], \" \", SuperscriptBox[\"x\", \"2\"]}], \"+\", RowBox[{\"rs\", \" \", SuperscriptBox[\"x\", \"3\"]}], \"+\", SuperscriptBox[\"x\", \"4\"]}], Function[Short[Slot[1], 5]]], ShowStringCharacters->False], \"\:f3b5 is not a univariate polynomial.\:f3b5\:f3b5\"}]\:f7c0\"",2,1140,50,33327249040630481009,"Local"},
+"MessageTemplate"]],"Message",CellID->31],Cell[
+BoxData[TemplateBox[{"Root","nup","\"\:f7c1\:f7c9\:f7c8RowBox[{\"\:f3b5\:f3b5\:f3b5\", StyleBox[TagBox[RowBox[{RowBox[{\"-\", \"rs\"}], \"-\", RowBox[{\"2\", \" \", SuperscriptBox[\"rs\", \"2\"]}], \"+\", SuperscriptBox[\"rs\", \"4\"], \"+\", RowBox[{RowBox[{\"(\", RowBox[{RowBox[{\"-\", \"1\"}], \"-\", RowBox[{\"2\", \" \", \"rs\"}], \"+\", SuperscriptBox[\"rs\", \"3\"]}], \")\"}], \" \", \"x\"}], \"+\", RowBox[{RowBox[{\"(\", RowBox[{RowBox[{\"-\", \"2\"}], \"+\", SuperscriptBox[\"rs\", \"2\"]}], \")\"}], \" \", SuperscriptBox[\"x\", \"2\"]}], \"+\", RowBox[{\"rs\", \" \", SuperscriptBox[\"x\", \"3\"]}], \"+\", SuperscriptBox[\"x\", \"4\"]}], Function[Short[Slot[1], 5]]], ShowStringCharacters->False], \"\:f3b5 is not a univariate polynomial.\:f3b5\:f3b5\"}]\:f7c0\"",2,1138,49,33327249040630481009,"Local"},
+"MessageTemplate"]],"Message",CellID->32],Cell[
+BoxData[TemplateBox[{"Root","nup","\"\:f7c1\:f7c9\:f7c8RowBox[{\"\:f3b5\:f3b5\:f3b5\", StyleBox[TagBox[RowBox[{RowBox[{\"-\", \"rs\"}], \"-\", RowBox[{\"2\", \" \", SuperscriptBox[\"rs\", \"2\"]}], \"+\", SuperscriptBox[\"rs\", \"4\"], \"+\", RowBox[{RowBox[{\"(\", RowBox[{RowBox[{\"-\", \"1\"}], \"-\", RowBox[{\"2\", \" \", \"rs\"}], \"+\", SuperscriptBox[\"rs\", \"3\"]}], \")\"}], \" \", \"x\"}], \"+\", RowBox[{RowBox[{\"(\", RowBox[{RowBox[{\"-\", \"2\"}], \"+\", SuperscriptBox[\"rs\", \"2\"]}], \")\"}], \" \", SuperscriptBox[\"x\", \"2\"]}], \"+\", RowBox[{\"rs\", \" \", SuperscriptBox[\"x\", \"3\"]}], \"+\", SuperscriptBox[\"x\", \"4\"]}], Function[Short[Slot[1], 5]]], ShowStringCharacters->False], \"\:f3b5 is not a univariate polynomial.\:f3b5\:f3b5\"}]\:f7c0\"",2,1136,48,33327249040630481009,"Local"},
+"MessageTemplate"]],"Message",CellID->33],Cell[
+BoxData[TemplateBox[{"Root","nup","\"\:f7c1\:f7c9\:f7c8RowBox[{\"\:f3b5\:f3b5\:f3b5\", StyleBox[TagBox[RowBox[{RowBox[{\"-\", \"rs\"}], \"-\", RowBox[{\"2\", \" \", SuperscriptBox[\"rs\", \"2\"]}], \"+\", SuperscriptBox[\"rs\", \"4\"], \"+\", RowBox[{RowBox[{\"(\", RowBox[{RowBox[{\"-\", \"1\"}], \"-\", RowBox[{\"2\", \" \", \"rs\"}], \"+\", SuperscriptBox[\"rs\", \"3\"]}], \")\"}], \" \", \"x\"}], \"+\", RowBox[{RowBox[{\"(\", RowBox[{RowBox[{\"-\", \"2\"}], \"+\", SuperscriptBox[\"rs\", \"2\"]}], \")\"}], \" \", SuperscriptBox[\"x\", \"2\"]}], \"+\", RowBox[{\"rs\", \" \", SuperscriptBox[\"x\", \"3\"]}], \"+\", SuperscriptBox[\"x\", \"4\"]}], Function[Short[Slot[1], 5]]], ShowStringCharacters->False], \"\:f3b5 is not a univariate polynomial.\:f3b5\:f3b5\"}]\:f7c0\"",2,1134,47,33327249040630481009,"Local"},
+"MessageTemplate"]],"Message",CellID->34],Cell[
+BoxData["\"El grupo de Galois es C2xC2\""],
+"Print",CellID->21],Cell[
+BoxData[TemplateBox[{"Root","nup","\"\:f7c1\:f7c9\:f7c8RowBox[{\"\:f3b5\:f3b5\:f3b5\", StyleBox[TagBox[RowBox[{RowBox[{\"-\", \"rs\"}], \"-\", RowBox[{\"2\", \" \", SuperscriptBox[\"rs\", \"2\"]}], \"+\", SuperscriptBox[\"rs\", \"4\"], \"+\", RowBox[{RowBox[{\"(\", RowBox[{RowBox[{\"-\", \"1\"}], \"-\", RowBox[{\"2\", \" \", \"rs\"}], \"+\", SuperscriptBox[\"rs\", \"3\"]}], \")\"}], \" \", \"x\"}], \"+\", RowBox[{RowBox[{\"(\", RowBox[{RowBox[{\"-\", \"2\"}], \"+\", SuperscriptBox[\"rs\", \"2\"]}], \")\"}], \" \", SuperscriptBox[\"x\", \"2\"]}], \"+\", RowBox[{\"rs\", \" \", SuperscriptBox[\"x\", \"3\"]}], \"+\", SuperscriptBox[\"x\", \"4\"]}], Function[Short[Slot[1], 5]]], ShowStringCharacters->False], \"\:f3b5 is not a univariate polynomial.\:f3b5\:f3b5\"}]\:f7c0\"",2,1216,58,33327249040630481009,"Local"},
+"MessageTemplate"]],"Message",CellID->22],Cell[
+BoxData[TemplateBox[{"Root","nup","\"\:f7c1\:f7c9\:f7c8RowBox[{\"\:f3b5\:f3b5\:f3b5\", StyleBox[TagBox[RowBox[{RowBox[{\"-\", \"rs\"}], \"-\", RowBox[{\"2\", \" \", SuperscriptBox[\"rs\", \"2\"]}], \"+\", SuperscriptBox[\"rs\", \"4\"], \"+\", RowBox[{RowBox[{\"(\", RowBox[{RowBox[{\"-\", \"1\"}], \"-\", RowBox[{\"2\", \" \", \"rs\"}], \"+\", SuperscriptBox[\"rs\", \"3\"]}], \")\"}], \" \", \"x\"}], \"+\", RowBox[{RowBox[{\"(\", RowBox[{RowBox[{\"-\", \"2\"}], \"+\", SuperscriptBox[\"rs\", \"2\"]}], \")\"}], \" \", SuperscriptBox[\"x\", \"2\"]}], \"+\", RowBox[{\"rs\", \" \", SuperscriptBox[\"x\", \"3\"]}], \"+\", SuperscriptBox[\"x\", \"4\"]}], Function[Short[Slot[1], 5]]], ShowStringCharacters->False], \"\:f3b5 is not a univariate polynomial.\:f3b5\:f3b5\"}]\:f7c0\"",2,1214,57,33327249040630481009,"Local"},
+"MessageTemplate"]],"Message",CellID->23],Cell[
+BoxData[TemplateBox[{"Root","nup","\"\:f7c1\:f7c9\:f7c8RowBox[{\"\:f3b5\:f3b5\:f3b5\", StyleBox[TagBox[RowBox[{RowBox[{\"-\", \"rs\"}], \"-\", RowBox[{\"2\", \" \", SuperscriptBox[\"rs\", \"2\"]}], \"+\", SuperscriptBox[\"rs\", \"4\"], \"+\", RowBox[{RowBox[{\"(\", RowBox[{RowBox[{\"-\", \"1\"}], \"-\", RowBox[{\"2\", \" \", \"rs\"}], \"+\", SuperscriptBox[\"rs\", \"3\"]}], \")\"}], \" \", \"x\"}], \"+\", RowBox[{RowBox[{\"(\", RowBox[{RowBox[{\"-\", \"2\"}], \"+\", SuperscriptBox[\"rs\", \"2\"]}], \")\"}], \" \", SuperscriptBox[\"x\", \"2\"]}], \"+\", RowBox[{\"rs\", \" \", SuperscriptBox[\"x\", \"3\"]}], \"+\", SuperscriptBox[\"x\", \"4\"]}], Function[Short[Slot[1], 5]]], ShowStringCharacters->False], \"\:f3b5 is not a univariate polynomial.\:f3b5\:f3b5\"}]\:f7c0\"",2,1212,56,33327249040630481009,"Local"},
+"MessageTemplate"]],"Message",CellID->24],Cell[
+BoxData[TemplateBox[{"Root","nup","\"\:f7c1\:f7c9\:f7c8RowBox[{\"\:f3b5\:f3b5\:f3b5\", StyleBox[TagBox[RowBox[{RowBox[{\"-\", \"rs\"}], \"-\", RowBox[{\"2\", \" \", SuperscriptBox[\"rs\", \"2\"]}], \"+\", SuperscriptBox[\"rs\", \"4\"], \"+\", RowBox[{RowBox[{\"(\", RowBox[{RowBox[{\"-\", \"1\"}], \"-\", RowBox[{\"2\", \" \", \"rs\"}], \"+\", SuperscriptBox[\"rs\", \"3\"]}], \")\"}], \" \", \"x\"}], \"+\", RowBox[{RowBox[{\"(\", RowBox[{RowBox[{\"-\", \"2\"}], \"+\", SuperscriptBox[\"rs\", \"2\"]}], \")\"}], \" \", SuperscriptBox[\"x\", \"2\"]}], \"+\", RowBox[{\"rs\", \" \", SuperscriptBox[\"x\", \"3\"]}], \"+\", SuperscriptBox[\"x\", \"4\"]}], Function[Short[Slot[1], 5]]], ShowStringCharacters->False], \"\:f3b5 is not a univariate polynomial.\:f3b5\:f3b5\"}]\:f7c0\"",2,1210,55,33327249040630481009,"Local"},
+"MessageTemplate"]],"Message",CellID->25],Cell[
+BoxData[TemplateBox[{"Root","nup","\"\:f7c1\:f7c9\:f7c8RowBox[{\"\:f3b5\:f3b5\:f3b5\", StyleBox[TagBox[RowBox[{RowBox[{\"-\", \"rs\"}], \"-\", RowBox[{\"2\", \" \", SuperscriptBox[\"rs\", \"2\"]}], \"+\", SuperscriptBox[\"rs\", \"4\"], \"+\", RowBox[{RowBox[{\"(\", RowBox[{RowBox[{\"-\", \"1\"}], \"-\", RowBox[{\"2\", \" \", \"rs\"}], \"+\", SuperscriptBox[\"rs\", \"3\"]}], \")\"}], \" \", \"x\"}], \"+\", RowBox[{RowBox[{\"(\", RowBox[{RowBox[{\"-\", \"2\"}], \"+\", SuperscriptBox[\"rs\", \"2\"]}], \")\"}], \" \", SuperscriptBox[\"x\", \"2\"]}], \"+\", RowBox[{\"rs\", \" \", SuperscriptBox[\"x\", \"3\"]}], \"+\", SuperscriptBox[\"x\", \"4\"]}], Function[Short[Slot[1], 5]]], ShowStringCharacters->False], \"\:f3b5 is not a univariate polynomial.\:f3b5\:f3b5\"}]\:f7c0\"",2,1183,54,33327249040630481009,"Local"},
+"MessageTemplate"]],"Message",CellID->26],Cell[
+BoxData[TemplateBox[{"Root","nup","\"\:f7c1\:f7c9\:f7c8RowBox[{\"\:f3b5\:f3b5\:f3b5\", StyleBox[TagBox[RowBox[{RowBox[{\"-\", \"rs\"}], \"-\", RowBox[{\"2\", \" \", SuperscriptBox[\"rs\", \"2\"]}], \"+\", SuperscriptBox[\"rs\", \"4\"], \"+\", RowBox[{RowBox[{\"(\", RowBox[{RowBox[{\"-\", \"1\"}], \"-\", RowBox[{\"2\", \" \", \"rs\"}], \"+\", SuperscriptBox[\"rs\", \"3\"]}], \")\"}], \" \", \"x\"}], \"+\", RowBox[{RowBox[{\"(\", RowBox[{RowBox[{\"-\", \"2\"}], \"+\", SuperscriptBox[\"rs\", \"2\"]}], \")\"}], \" \", SuperscriptBox[\"x\", \"2\"]}], \"+\", RowBox[{\"rs\", \" \", SuperscriptBox[\"x\", \"3\"]}], \"+\", SuperscriptBox[\"x\", \"4\"]}], Function[Short[Slot[1], 5]]], ShowStringCharacters->False], \"\:f3b5 is not a univariate polynomial.\:f3b5\:f3b5\"}]\:f7c0\"",2,1181,53,33327249040630481009,"Local"},
+"MessageTemplate"]],"Message",CellID->27],Cell[
+BoxData[TemplateBox[{"Root","nup","\"\:f7c1\:f7c9\:f7c8RowBox[{\"\:f3b5\:f3b5\:f3b5\", StyleBox[TagBox[RowBox[{RowBox[{\"-\", \"rs\"}], \"-\", RowBox[{\"2\", \" \", SuperscriptBox[\"rs\", \"2\"]}], \"+\", SuperscriptBox[\"rs\", \"4\"], \"+\", RowBox[{RowBox[{\"(\", RowBox[{RowBox[{\"-\", \"1\"}], \"-\", RowBox[{\"2\", \" \", \"rs\"}], \"+\", SuperscriptBox[\"rs\", \"3\"]}], \")\"}], \" \", \"x\"}], \"+\", RowBox[{RowBox[{\"(\", RowBox[{RowBox[{\"-\", \"2\"}], \"+\", SuperscriptBox[\"rs\", \"2\"]}], \")\"}], \" \", SuperscriptBox[\"x\", \"2\"]}], \"+\", RowBox[{\"rs\", \" \", SuperscriptBox[\"x\", \"3\"]}], \"+\", SuperscriptBox[\"x\", \"4\"]}], Function[Short[Slot[1], 5]]], ShowStringCharacters->False], \"\:f3b5 is not a univariate polynomial.\:f3b5\:f3b5\"}]\:f7c0\"",2,1179,52,33327249040630481009,"Local"},
+"MessageTemplate"]],"Message",CellID->28],Cell[
+BoxData[TemplateBox[{"Root","nup","\"\:f7c1\:f7c9\:f7c8RowBox[{\"\:f3b5\:f3b5\:f3b5\", StyleBox[TagBox[RowBox[{RowBox[{\"-\", \"rs\"}], \"-\", RowBox[{\"2\", \" \", SuperscriptBox[\"rs\", \"2\"]}], \"+\", SuperscriptBox[\"rs\", \"4\"], \"+\", RowBox[{RowBox[{\"(\", RowBox[{RowBox[{\"-\", \"1\"}], \"-\", RowBox[{\"2\", \" \", \"rs\"}], \"+\", SuperscriptBox[\"rs\", \"3\"]}], \")\"}], \" \", \"x\"}], \"+\", RowBox[{RowBox[{\"(\", RowBox[{RowBox[{\"-\", \"2\"}], \"+\", SuperscriptBox[\"rs\", \"2\"]}], \")\"}], \" \", SuperscriptBox[\"x\", \"2\"]}], \"+\", RowBox[{\"rs\", \" \", SuperscriptBox[\"x\", \"3\"]}], \"+\", SuperscriptBox[\"x\", \"4\"]}], Function[Short[Slot[1], 5]]], ShowStringCharacters->False], \"\:f3b5 is not a univariate polynomial.\:f3b5\:f3b5\"}]\:f7c0\"",2,1177,51,33327249040630481009,"Local"},
+"MessageTemplate"]],"Message",CellID->29]},Open]]},Open]]},StyleDefinitions->"Default.nb",
+FrontEndVersion->"10.0 for Wolfram Cloud Platform (June 2 2014)"]
